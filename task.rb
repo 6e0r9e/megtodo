@@ -7,4 +7,8 @@ class Task
     @text = text
     @completed = false
   end
+
+  def complete!
+    @completed == true
+  end
 end
