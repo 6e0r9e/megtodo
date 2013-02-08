@@ -9,6 +9,7 @@ class ToDoView
     puts "-l list all tasks"
     puts "-h get help"
   end
+  
   def confirm_add
     puts "Are you sure you want to add this task?"
   end
@@ -31,7 +32,7 @@ class ToDoView
   end
   
   def error
-    puts "That is invalid input."
+    puts "That is is invalid. -h will get you the commands"
   end
   
   def bid_farewell
