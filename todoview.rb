@@ -6,6 +6,7 @@ class ToDoView
     puts "-a add a task"
     puts "-d delete a task"
     puts "-c complete a task"
+    puts "-v view current task"
     puts "-l list all tasks"
     puts "-h get help"
   end
@@ -20,6 +21,10 @@ class ToDoView
   
   def display_task
     puts "Here is your current task:"
+  end
+  
+  def display_list
+    puts "Here is the list of tasks:"
   end
   
   def help
