@@ -10,7 +10,7 @@ class ToDoView
     puts "-l list all tasks"
     puts "-h get help"
   end
-  
+
   def confirm_add
     puts "Are you sure you want to add this task?"
   end
