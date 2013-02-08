@@ -8,15 +8,15 @@ class List
   end
 
   def add(task)
-    
+    @task << Task.new
   end
 
   def delete!(id)
-    
+    @task[id]
   end
 
   def complete(id)
-    
+
   end
 
   def count
