@@ -31,7 +31,7 @@ class ToDoView
   end
   
   def error
-    
+    puts "That is invalid input."
   end
   
   def bid_farewell
