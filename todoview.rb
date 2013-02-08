@@ -1,30 +1,40 @@
 #View class
 class ToDoView
 
-  def initialize
-    until gets.chomp == "\n"
+  def print_welcome
     puts "Welcome to todo app. Here are your options."
     puts "-a add a task"
     puts "-d delete a task"
     puts "-c complete a task"
     puts "-l list all tasks"
     puts "-h get help"
-    gets.chomp
   end
-end
-
   def confirm_add
-    puts "Do you want to add this task?"
-    gets.chomp == "yes" ? task.add : nil
+    puts "Are you sure you want to add this task?"
   end
   
   def confirm_delete
-    puts "Are you sure you want to delete this task?"
-    gets.chomp == "yes" ? task.delete : 
+    puts "Are you sure you want to delete this task"
   end
   
-  def list_help
-    puts "Make sure you typed in a valid command."
+  def display_task
+    puts "Here is your current task."
   end
+  
+  def help
+    puts "Here are the commands."
+    puts "-a add a task"
+    puts "-d delete a task"
+    puts "-c complete a task"
+    puts "-l list all tasks"
+    puts "-h get help"
+  end
+  
+  def error
     
+  end
+  
+  def bid_farewell
+    puts "Thank you for using this app.  Farewell!"
+  end
 end
