@@ -1,5 +1,5 @@
 class List
-  FILENAME = "task.txt"
+  FILENAME = "data.gemtask"
   attr_reader :tasks
 
   def initialize
