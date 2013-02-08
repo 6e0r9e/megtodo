@@ -3,20 +3,20 @@ class List
   attr_reader :tasks
 
   def initialize
-    @task = []
+    @tasks = []
     parse_list
   end
 
-  def add(task)
-    @task << Task.new
+  def add(tasks)
+    @tasks << Task.new
   end
 
   def delete!(id)
-    @task[id]
+    @tasks[id]
   end
 
   def complete(id)
-
+    @tasks[id].complete!
   end
 
   def count
