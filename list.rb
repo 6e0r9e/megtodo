@@ -3,7 +3,8 @@ class List
   attr_reader :tasks
 
   def initialize
-    
+    @task = []
+    parse_list
   end
 
   def add(task)
