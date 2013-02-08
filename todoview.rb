@@ -2,7 +2,7 @@
 class ToDoView
 
   def print_welcome
-    puts "Welcome to your todo list. Here are your options."
+    puts "Welcome to your todo list. Here are your options:"
     puts "-a add a task"
     puts "-d delete a task"
     puts "-c complete a task"
@@ -23,7 +23,7 @@ class ToDoView
   end
   
   def help
-    puts "Here are the commands."
+    puts "Here are the commands:"
     puts "-a add a task"
     puts "-d delete a task"
     puts "-c complete a task"
