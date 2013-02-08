@@ -32,7 +32,7 @@ class ToDoView
   end
   
   def error
-    puts "That is is invalid. -h will get you the help menu."
+    puts "That is an invalid request. -h will get you the help menu."
   end
   
   def bid_farewell
