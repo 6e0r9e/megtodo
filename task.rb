@@ -9,6 +9,6 @@ class Task
   end
 
   def complete!
-    @completed == true
+    @completed = true
   end
 end
