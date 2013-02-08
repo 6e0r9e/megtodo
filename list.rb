@@ -12,7 +12,7 @@ class List
   end
 
   def delete!(id)
-    @tasks[id]
+    @tasks[id].delete
   end
 
   def complete(id)
@@ -20,15 +20,14 @@ class List
   end
 
   def count
-    
+    @tasks.length
   end
 
   def save
-    
   end
 
   def list_all
-    
+    @tasks
   end
 
 
