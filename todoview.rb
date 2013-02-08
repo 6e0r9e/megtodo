@@ -28,10 +28,11 @@ class ToDoView
   end
   
   def help
-    puts "Here are the commands:"
+    puts "Here are the options:"
     puts "-a add a task"
     puts "-d delete a task"
     puts "-c complete a task"
+    puts "-v view current task"
     puts "-l list all tasks"
     puts "-h get help"
   end
