@@ -36,13 +36,11 @@ class List
   def parse_list
     lines = []
     File.open(FILENAME) do |f|
-      lines = f.readlines
+      lines = f.readlines.map!(&:chomp)
     end  
 
     lines.each_slice(3) do |id, task, completed|
-      @tasks << Task.new(id, task)
-    end  
-    puts @tasks.inspect   
+      @tasks << Task.new(id, task, completed)
+    end
   end
-end 
-
+end
