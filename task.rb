@@ -13,6 +13,7 @@ class Task
   end
 
   def to_s
-    "#{@id}\n#{@text}\n#{@completed}\n"
+    letter = @completed ? "x" : "o"
+    "#{@id}\n#{@text}\n#{letter}\n"
   end
 end
