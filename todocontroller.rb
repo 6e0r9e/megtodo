@@ -1,9 +1,7 @@
-require 'list.rb'
-require 'task.rb'
-
+require_relative 'list'
+require_relative 'todoview'
 
 class TODOController
- attr_reader :list, :view
  def initialize
   @list = List.new
   @view = ToDoView.new
