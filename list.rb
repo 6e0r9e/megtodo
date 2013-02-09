@@ -7,12 +7,13 @@ class List
     parse_list
   end
 
-  def add(tasks)
-    @tasks << Task.new
+  def add(task)
+    id = lookup_id
+    @tasks << Task.new(id, task)
   end
 
   def delete!(id)
-    @tasks[id].delete
+    @tasks[id].delete #bugbug
   end
 
   def complete(id)
@@ -42,5 +43,9 @@ class List
     lines.each_slice(3) do |id, task, completed|
       @tasks << Task.new(id, task, completed)
     end
+  end
+
+  def lookup_id
+    puts self.count
   end
 end
