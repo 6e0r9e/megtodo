@@ -1,3 +1,4 @@
+require_relative "task"
 class List
   FILENAME = "data.gemtask"
   attr_reader :tasks
