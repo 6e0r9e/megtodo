@@ -20,17 +20,17 @@ class List
     @tasks[id].complete!
   end
 
-  def count
-    @tasks.length
-  end
-
   def save
+    File.open(FILENAME, "wb") do |f|
+      @tasks.each do |task|
+        f.write(task.to_s)
+      end
+    end
   end
 
   def list_all
     @tasks
   end
-
 
   private
 
@@ -40,12 +40,12 @@ class List
       lines = f.readlines.map!(&:chomp)
     end  
 
-    lines.each_slice(3) do |id, task, completed|
-      @tasks << Task.new(id, task, completed)
+    lines.each_slice(3) do |id, task, status|
+      @tasks << Task.new(id, task, status == "o")
     end
   end
 
   def lookup_id
-    puts self.count
+    @tasks.length
   end
 end
