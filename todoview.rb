@@ -8,7 +8,8 @@ class ToDoView
   end
 
   def display_task(id, status, task)
-    puts "  #{status}::#{id}::#{task}"
+    x_or_o = status ? "o" : "x"
+    puts "  #{x_or_o}::#{id}::#{task}"
   end
 
   def help
