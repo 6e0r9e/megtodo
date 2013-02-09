@@ -11,4 +11,8 @@ class Task
   def complete!
     @completed = true
   end
+
+  def to_s
+    "#{@id}\n#{@text}\n#{@completed}\n"
+  end
 end
