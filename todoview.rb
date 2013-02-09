@@ -8,7 +8,7 @@ class ToDoView
   end
 
   def display_task(id, status, task)
-    puts "#{id} #{status} || #{task}"
+    puts "  #{status}::#{id}::#{task}"
   end
 
   def help
@@ -24,17 +24,9 @@ class ToDoView
     puts "Invalid command. Type <help> for possible commands."
   end
 
-  private
-
   def display_list_header
-    puts "==================="
-    puts "=    Task List    ="
-    puts "==================="
+    puts "======================================="
+    puts "=                        Task List    ="
+    puts "======================================="
   end
-
 end
-
-view = ToDoView.new
-view.help
-view.display_list_header
-view.display_task("1", "O", "Walk the dog")
