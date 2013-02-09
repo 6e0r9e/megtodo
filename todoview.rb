@@ -1,48 +1,32 @@
-#View class
 class ToDoView
-
-  def print_welcome
-    puts "Welcome to your todo list. Here are your options:"
-    puts "-a add a task"
-    puts "-d delete a task"
-    puts "-c complete a task"
-    puts "-v view current task"
-    puts "-l list all tasks"
-    puts "-h get help"
-  end
-
   def confirm_add
-    puts "Are you sure you want to add this task?"
+    puts "Adding your task now..."
   end
-  
+
   def confirm_delete
-    puts "Are you sure you want to delete this task?"
+    puts "Deleting your task now..."
   end
-  
-  def display_task
-    puts "Here is your current task:"
+
+  def display_task(id, status, task)
+    puts "  #{status}::#{id}::#{task}"
   end
-  
-  def display_list
-    puts "Here is the list of tasks:"
-  end
-  
+
   def help
-    puts "Here are the options:"
-    puts "-a add a task"
-    puts "-d delete a task"
-    puts "-c complete a task"
-    puts "-v view current task"
-    puts "-l list all tasks"
-    puts "-h get help"
+    puts "Here are the commands:"
+    puts "  add <text of task>\tAdd a new task"
+    puts "  list\t\t\tList all tasks"
+    puts "  delete <task_id>\tDelete a task by ID number"
+    puts "  complete <task_id>\tMark task as complete by ID number"
+    puts "  help\t\t\tDisplay this message."
   end
-  
+
   def error
-    puts "That is an invalid request. -h will get you the help menu."
+    puts "Invalid command. Type <help> for possible commands."
   end
-  
-  def bid_farewell
-    puts "Thank you for using this app. Farewell!"
+
+  def display_list_header
+    puts "======================================="
+    puts "=                        Task List    ="
+    puts "======================================="
   end
-  
 end
