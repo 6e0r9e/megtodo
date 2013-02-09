@@ -2,10 +2,10 @@ class Task
   attr_reader :id, :text
   attr_accessor :completed
 
-  def initialize(id, text)
+  def initialize(id, text, completed = false)
     @id = id
     @text = text
-    @completed = false
+    @completed = completed
   end
 
   def complete!
