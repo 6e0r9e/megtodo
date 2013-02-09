@@ -13,7 +13,7 @@ class List
   end
 
   def delete!(id)
-    @tasks[id].delete #bugbug
+    @tasks.delete_at(id)
   end
 
   def complete(id)
