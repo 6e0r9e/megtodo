@@ -38,12 +38,11 @@ class List
     File.open(FILENAME) do |f|
       lines = f.readlines
     end  
-    lines.each do |line|
-      line.chomp!
-    end
-      # lines << f.each_slice(3) 
-    puts lines.inspect   
+
+    lines.each_slice(3) do |id, task, completed|
+      @tasks << Task.new(id, task)
+    end  
+    puts @tasks.inspect   
   end
 end 
 
-l = List.new
